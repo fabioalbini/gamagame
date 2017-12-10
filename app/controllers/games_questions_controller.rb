@@ -2,7 +2,6 @@ class GamesQuestionsController < ApplicationController
 
   def edit
     @game_question = GameQuestion.find(params[:id])
-    @game_question.answer = 1
     @question = @game_question.question
   end
 
