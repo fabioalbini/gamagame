@@ -19,7 +19,6 @@ nav.navbar {
       font-size: 20px;
     }
 
-
     &.info-card {
       .btn-success {
         width: 180px;
@@ -35,6 +34,15 @@ nav.navbar {
         font-weight: 300;
         font-size: 14px;
       }
+    }
+
+    div.form-check {
+      background-color: #EEEEEE;
+      padding: 15px;
+    }
+
+    div.questions-container {
+      padding-bottom: 25px;
     }
   }
 }
