@@ -1,8 +1,55 @@
-nav.navbar {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  div.container {
-    padding: 0 10px;
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  background-color: #E6EAEE;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+div.inline {
+  display: inline-block;
+}
+
+div.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #34AA44;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  border-radius: .25rem;
+
+  &.btn-lg {
+    width: 110px;
+  }
+
+  &.disabled {
+    background-color: #E6EAEE;
+  }
+
+  &:hover:not(.disabled) {
+    background-color: #249533;
   }
 }
 
@@ -10,6 +57,10 @@ nav.navbar {
   padding-top: 70px;
 
   .card-body {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: .35rem;
+
     h2 {
       padding: 10px;
     }
@@ -22,28 +73,36 @@ nav.navbar {
         vertical-align: middle;
       }
     }
-    
 
-    &.info-card {
-      .btn-success {
-        width: 180px;
-      }
-    }
-
-    .question-title {
+    .question-header {
       font-size: 24px;
       font-weight: 400;
       margin: 10px 0 30px 10px;
+      width: 100%;
 
       span.badge {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 13px;
+        min-width: 30px;
+        background-color: #2EA1F8;
+        color: #FFFFFF;
+        border-radius: .25rem;
+        padding: 5px;
+      }
+
+      div.question-title {
+        width: 70%;
+      }
+
+      div.question-badge {
+        width: 25%;
       }
     }
 
     div.form-check {
       background-color: #EEEEEE;
       padding: 15px;
+      margin: 10px;
     }
 
     div.questions-container {
@@ -54,6 +113,22 @@ nav.navbar {
       color: #B54C0D;
       font-size: 40px;
     }
+  }
+}
+
+div.alert {
+  height: 20px;
+  text-align: center;
+  padding: 15px;
+  
+  &.error {
+    background-color: #ffd0d0;
+    border: 1px solid #ffb6b6;
+  }
+
+  &.success {
+    background-color: #8fd498;
+    border: 1px solid #71d67d;
   }
 }
 

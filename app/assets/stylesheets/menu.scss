@@ -1,0 +1,48 @@
+$navbar-color: #1990EA;
+$navbar-color-hover: #2EA1F8;
+
+nav.navbar {
+  background-color: $navbar-color;
+
+  div.container {
+    padding: 0 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    line-height: 17px;
+    vertical-align: middle;
+    height: 50px;
+
+    &.brand-name {
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    &.item {
+      float: right;
+      font-size: 14px;
+    }
+  
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+    &:hover {
+      background-color: $navbar-color-hover;
+    }
+  }
+}
