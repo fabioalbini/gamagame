@@ -16,4 +16,8 @@ class Game < ApplicationRecord
   def score
     games_questions.joins(:question).where('questions.answer = games_questions.answer').count
   end
+
+  def belongs_to_session?(session_id)
+    user_session == session_id
+  end
 end
