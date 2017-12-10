@@ -27,8 +27,4 @@ class GamesController < ApplicationController
     end
     game
   end
-
-  def can_start_new_game?
-    Game.current(session.id).nil?
-  end
 end
