@@ -1,0 +1,26 @@
+nav.navbar {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  div.container {
+    padding: 0 10px;
+  }
+}
+
+#main-container {
+  padding-top: 70px;
+
+  .card-body {
+    h2 {
+      padding: 10px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 20px;
+    }
+
+    .btn-success {
+      width: 180px;
+    }
+  }
+}
