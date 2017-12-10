@@ -10,8 +10,7 @@ class GamesQuestionsController < ApplicationController
     @question = @game_question.question
 
     if @game_question.update(game_question_params)
-      next_game_question = @game_question.game.next_game_question
-      redirect_user(next_game_question)
+      redirect_user(@game_question)
     else
       render :edit
     end
@@ -20,8 +19,9 @@ class GamesQuestionsController < ApplicationController
   private
 
   def redirect_user(next_game_question)
+    next_game_question = @game_question.game.next_game_question
     if next_game_question.nil?
-      render :edit
+      redirect_to game_path(@game_question.game)
     else
       redirect_to edit_game_question_path(next_game_question)
     end

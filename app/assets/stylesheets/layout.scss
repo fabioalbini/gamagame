@@ -17,7 +17,12 @@ nav.navbar {
     p {
       font-weight: 300;
       font-size: 20px;
+
+      span.score {
+        vertical-align: middle;
+      }
     }
+    
 
     &.info-card {
       .btn-success {
@@ -43,6 +48,11 @@ nav.navbar {
 
     div.questions-container {
       padding-bottom: 25px;
+    }
+
+    span.score {
+      color: #B54C0D;
+      font-size: 40px;
     }
   }
 }

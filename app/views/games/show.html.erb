@@ -1,0 +1,9 @@
+<div class="card text-center">
+  <div class="info-card card-body">
+    <h2>Congratulations! You completed the game!</h2>
+    <p>
+      Your score was <span class="score"><%= @score.to_s.rjust(2, '0') %>/10</span>
+    </p>
+    <%= link_to 'Restart', games_path, class: 'btn btn-lg btn-success', method: :post %>
+  </div>
+</div>

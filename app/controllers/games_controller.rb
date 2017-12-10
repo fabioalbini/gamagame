@@ -13,6 +13,11 @@ class GamesController < ApplicationController
     redirect_to edit_game_question_path(@game.games_questions.first), flash: { success: "Welcome to Gama Game!" }
   end
 
+  def show
+    @game = Game.find(params[:id])
+    @score = @game.score
+  end
+
   private
 
   def prepare_game

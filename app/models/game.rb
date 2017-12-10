@@ -12,4 +12,8 @@ class Game < ApplicationRecord
   def next_game_question
     games_questions.where(answer: nil).first
   end
+
+  def score
+    games_questions.joins(:question).where('questions.answer = games_questions.answer').count
+  end
 end
