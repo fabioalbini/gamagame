@@ -19,8 +19,22 @@ nav.navbar {
       font-size: 20px;
     }
 
-    .btn-success {
-      width: 180px;
+
+    &.info-card {
+      .btn-success {
+        width: 180px;
+      }
+    }
+
+    .question-title {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 10px 0 30px 10px;
+
+      span.badge {
+        font-weight: 300;
+        font-size: 14px;
+      }
     }
   }
 }
