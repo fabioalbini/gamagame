@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Question, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "relations" do
+    it "has many games_questions" do
+      expect(Question.reflect_on_association(:games_questions)).to_not eq(nil)
+    end
+
+    it "has many games" do
+      expect(Question.reflect_on_association(:games)).to_not eq(nil)
+    end
+  end
 end
