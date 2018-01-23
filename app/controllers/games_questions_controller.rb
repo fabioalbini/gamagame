@@ -16,10 +16,10 @@ class GamesQuestionsController < ApplicationController
 
   private
 
-  def redirect_user(next_game_question)
-    next_game_question = @game_question.game.next_game_question
+  def redirect_user(game_question)
+    next_game_question = game_question.game.next_game_question
     if next_game_question.nil?
-      redirect_to game_path(@game_question.game)
+      redirect_to game_path(game_question.game)
     else
       redirect_to edit_game_question_path(next_game_question)
     end
