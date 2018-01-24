@@ -19,6 +19,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'capybara'
+end
+
+group :test do
+  gem 'selenium-webdriver'
 end
 
 group :development do
