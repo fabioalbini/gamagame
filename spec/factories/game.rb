@@ -6,7 +6,7 @@ FactoryBot.define do
       transient do
         questions_count 10
       end
-  
+
       after(:build) do |game, evaluator|
         evaluator.questions_count.times do
           question = build(:question)
