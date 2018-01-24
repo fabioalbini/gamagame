@@ -17,7 +17,7 @@ RSpec.describe 'start a new game', type: :feature do
       click_on 'Next'
     end
 
-    expect(Game.last.score).to eq(10)
+    expect(page).to have_content('Your score was 10/10')
   end
 
   scenario 'returns a score of 0', js: true do
@@ -30,6 +30,6 @@ RSpec.describe 'start a new game', type: :feature do
       click_on 'Next'
     end
 
-    expect(Game.last.score).to eq(0)
+    expect(page).to have_content('Your score was 00/10')
   end
 end
