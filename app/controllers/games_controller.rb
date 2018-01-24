@@ -21,10 +21,16 @@ class GamesController < ApplicationController
   private
 
   def prepare_game
+    initialize_session
     game = Game.create(user_session: session.id)
     Question.at_random(10).each do |question|
       GameQuestion.create(game_id: game.id, question_id: question.id)
     end
     game
+  end
+
+  # https://github.com/rails/rails/issues/10813
+  def initialize_session
+    session.delete 'init'
   end
 end
