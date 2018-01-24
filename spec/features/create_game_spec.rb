@@ -7,6 +7,10 @@ RSpec.describe 'start a new game', type: :feature do
     end
   end
 
+  after(:all) do
+    Question.delete_all
+  end
+
   scenario 'returns a perfect score of 10', js: true do
     visit '/'
 
@@ -31,5 +35,14 @@ RSpec.describe 'start a new game', type: :feature do
     end
 
     expect(page).to have_content('Your score was 00/10')
+  end
+
+  scenario 'avoids a new game from being started if a game is unfinished' do
+    2.times do
+      visit '/'
+      click_on 'Start'
+    end
+
+    expect(page).to have_content("You're already playing a game")
   end
 end
