@@ -87,5 +87,15 @@ RSpec.describe GamesQuestionsController, type: :controller do
       expect(session['flash']['flashes']['error']).to eq("You don't have access to this game")
     end
 
+    it "can't allow an update request with a blank answer" do
+      game_question = game.games_questions.first
+      game_question.answer = ''
+
+      patch :update, params: { id: game_question, game_question: game_question.attributes }
+
+      expect(response).to be_success
+      expect(session['flash']).to be_nil
+      expect(response).to render_template(:edit)
+    end
   end
 end

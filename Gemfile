@@ -24,6 +24,7 @@ end
 
 group :test do
   gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
 end
 
 group :development do
